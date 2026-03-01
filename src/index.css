@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #4F2C37;
+  --color-sky: #BAE6FD; /* Soft sky blue */
+  --color-beige: #F5F5F0; /* Warm beige */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-beige text-burgundy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 rounded-3xl shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-burgundy text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white text-burgundy border border-burgundy/10 px-8 py-4 rounded-full font-medium transition-all hover:bg-burgundy/5 active:scale-95;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
